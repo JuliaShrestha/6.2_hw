@@ -1,12 +1,10 @@
-
 // Дано масив з елементами різних типів. Створити функцію яка вираховує середнє арифметичне лише числових елементів даного масиву.
 
 const array = [21, 26, true, 'hello', null, { prop: 20 }, 50, undefined, '123', function(){ }, 10];
 
+function averageOfNumbers (arr) {
 
-function averageOfNumbers () {
-
-    const numbers = array.filter(function(element) {
+    const numbers = arr.filter(function(element) {
         return typeof element === 'number'
     });
 
@@ -19,4 +17,4 @@ function averageOfNumbers () {
     return average;
 }
 
-console.log(averageOfNumbers());
+console.log(averageOfNumbers(array)); 
